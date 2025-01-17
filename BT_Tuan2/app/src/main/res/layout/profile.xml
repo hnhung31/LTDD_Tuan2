@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="250dp">
 
     <!-- CircleImageView for student image -->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/studentImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
-        app:civ_border_width="2dp"
+        android:layout_marginTop="248dp"
+        android:src="@drawable/anhdaidien"
         app:civ_border_color="#FFFFFF"
-        android:src="@drawable/anhdaidien" />
+        app:civ_border_width="2dp"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- TextView for student info -->
     <TextView
         android:id="@+id/studentInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/studentImage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text=" Nguyễn Thị Hồng Nhung 22110391"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentImage" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
